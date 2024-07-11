@@ -1,0 +1,358 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+body,html{
+    font-family: sans-serif;
+}
+a{
+    text-decoration: none;
+    color: black;
+}
+header nav{
+background-color:rgb(137 26 137);
+}
+.logo{
+    padding-left: 20px;
+    font-size: 40px;
+}
+nav {
+    /* position: fixed; */
+    position: fixed;
+    display: flex;
+    justify-content: space-between;
+    padding: 0px 10px;
+    z-index: 999;
+}
+nav ul{
+    list-style: none;
+    display: flex;
+
+}
+nav ul li{
+   padding: 15px 15px 0px 15px;
+}
+nav ul li a{
+    color: white;
+    font-weight: 500;
+}
+li .active{
+    color: black
+}
+nav ul li a:hover{
+    color: rgb(20, 20, 20);
+}
+.menu-btn {
+    display: none;
+}
+.menu-btn i{
+padding: 5px;
+color: white;
+font-size: 25px;
+padding-top: 15px;
+position: absolute;
+right: 15px;
+}
+@media(max-width:768px){
+    .nav-links{
+        flex-direction: column;
+        position: absolute;
+        top:0;
+        right:0;
+        background-color:black; 
+        width: 50%;
+        height: 100vh;
+        border-bottom-left-radius:80px ;
+        padding-top: 40px;
+        margin-top: -999px;
+        /* transition:  all 1s ease; */
+    }
+    .nav-links li{
+        padding: 15px 0px;
+    }
+    .nav-links.active-links{
+        margin-top: 0px;
+    }
+    .nav-links li a{
+        color: rgb(137 26 137);
+    }
+     .nav-links li a:hover{
+        color: white;
+    }
+    
+    .menu-btn{
+        display: block;
+        color: white;
+    }
+}
+.section-title{
+text-align: center;
+color: rgb(86, 18, 92);
+font-size: 30px;
+text-decoration: underline;
+font-weight: 700;
+}
+.main-header{
+    /* position: relative; */
+    background: url('asstes/bgindex.jpg');
+    background-position: center;
+    background-size: cover;
+    height: 80vh;
+}
+.bg{
+    /* position: absolute;
+    top:0;
+    left:0; */
+   height: inherit;
+    width: 100%;
+    background: rgba(0,0,0,0.5);
+}
+.header-content{
+    padding-top: 200px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    color: white;
+    
+}
+.header-content h1{
+    font-weight: 700;
+}
+.lg-txt{
+font-weight: 700;
+}
+.line{
+    background-color:black;
+    color: white;
+    padding: 20px;
+    text-align: center;
+  
+}
+.line h2{
+    font-weight: 500;
+    font-size: 50px;
+}
+.card1{
+    padding: 20px;
+    
+  z-index: 1;
+    transition: 0.2s ease-in-out;
+}
+.card1 .card1-txt{
+    padding: 20px;
+    text-align: center;
+}
+.card1:hover{
+    transform: scale(1.04);
+}
+.card1 h1{
+    font-size: 30px;
+    text-align: center;
+    margin-bottom: 12px;
+    font-weight: 700;
+
+}
+.skill-box
+{    position: relative;
+    padding: 0px 20px;
+   
+    margin-bottom: 20px;
+}
+.skill-box .title{
+    padding: 20px;
+    font-size: 15px;
+    font-weight: 600;
+   
+}
+.skill-box .skill-bar{
+    width: 100%;
+    background: rgba(0,0,0,0.2);
+    height: 8px;
+    border-radius: 10px;
+    margin-top:10px;
+
+}
+.skill-box .skill-bar .skill-per{
+    /* position: relative;
+    background-color: black;
+    height: 8px;
+    border-radius: 10px;
+} */
+position: relative;
+display: block;
+height: 100%;
+background-color:rgb(86, 18, 92);
+width: 90%;
+border-radius: 10px;
+animation: progress 0.4s ease-in-out forwards;
+   opacity: 1;
+}
+@keyframes progress{
+    0%{
+        width: 0;
+        opacity: 1;
+    }
+    10%{
+       
+        opacity: 1; 
+    }
+}
+.skill-box .skill-bar .skill-per.css{
+   
+    width: 60%;
+   
+    animation-delay: 0.1s;
+
+}
+.skill-box .skill-bar .skill-per.js{
+   
+    width: 80%;
+    animation-delay: 0.2s;
+}
+.skill-box .skill-bar .skill-per.java{
+   
+    width: 90%;
+    animation-delay: 0.3s;
+}
+.skill-box .skill-bar .skill-per.mysql{
+   
+    width: 80%;
+    animation-delay: 0.4s;
+}
+.skill-per .tool-tip{
+    position: absolute;
+    right: -14px;
+    top: -24px;
+    font-size: 12px;
+}
+.work{
+padding: 20px;
+
+}
+.work h1{
+    font-size: 16px;
+    font-weight: 600;
+    color:rgb(86, 18, 92);
+}
+.work span{
+   color: rgb(61, 61, 61);
+   font-weight: 700;
+    
+}
+.work2 .title{
+    color: rgb(61, 61, 61);
+    font-weight: 700;
+}
+.project-container{
+    margin: 10px;
+    padding: 15px;
+    border: 2px solid rgb(86, 18, 92) ;
+    min-height: 230px;
+    transform: scale(0.9);
+    transition: transform 1s ease;
+    z-index: 1;
+    
+}
+.project-container h1{
+    font-size: 20px;
+    font-weight: 700;
+}
+.project-container h3{
+    font-size: 15px;
+    font-weight: 700;
+}
+.project-container h5{
+    font-size: 15px;
+  
+}
+.project-container:hover{
+    transform:scale(1);
+}
+.contact-box .contact-title{
+text-align: center;
+color: white;
+font-size: 30px;
+text-decoration: underline;
+font-weight: 700;
+padding: 10px;
+}
+.contact{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.contact-form button{
+background-color: black;
+padding: 10px 20px;
+border-radius: 10px;
+color: white;
+border: none;
+font-weight: 700;
+}
+.contact-form button:hover{
+    background-color: white;
+    color: black;
+}
+
+.contact-form form{
+    padding: 10px;
+    margin-top: 10px;
+  
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+
+}
+.contact-form form input,
+.contact-form form textarea {
+    width: 80%;
+    margin-bottom: 10px; /* Add margin to create space between inputs */
+    font-weight: 400;
+   padding: 5px 10px;
+}
+
+
+.contact-box {
+    margin-top: 50px;
+    background-color:rgb(36, 35, 35);
+    color: white;
+}
+.contact-box h2{
+    margin-top: 20px;
+    text-align: center;
+}
+.contact .social-link{
+    padding: 10px;
+    position: relative;
+    display: flex;
+   margin-top: 10px;
+    justify-content: center;
+    gap: 12px;
+}
+.contact .social-link i{
+    
+   margin-top: 10px;
+    font-size: 25px;
+    transform: scale(1);
+    transition:transform 1s;
+    color:white;
+} 
+.contact .social-link i:hover{
+    transform: scale(1.2);
+    color: rgb(119, 41, 126);
+}
+footer{
+    background-color: black;
+    color: rgb(119, 41, 126);
+    padding: 20px;
+  
+}
+footer h1{
+    font-size: 20px;
+    font-weight: 500;
+    text-align: center;
+}
