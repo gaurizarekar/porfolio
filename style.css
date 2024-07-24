@@ -11,6 +11,7 @@ a{
     color: black;
 }
 header nav{
+   
 background-color:rgb(137 26 137);
 }
 .logo{
@@ -355,4 +356,16 @@ footer h1{
     font-size: 20px;
     font-weight: 500;
     text-align: center;
-}
+}   
+/* aos animation */
+.heading, .line, .about, .projects, .contact-box {
+    opacity: 0;
+    transform: translateY(20px); /* Adjust as needed */
+    transition: opacity 0.6s ease, transform 0.6s ease;
+  }
+  
+  .heading.animate__animated, .line.animate__animated, .about.animate__animated, .projects.animate__animated, .contact-box.animate__animated {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  
