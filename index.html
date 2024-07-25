@@ -185,11 +185,36 @@
         <h1>Project By Gauri</h1>
       </footer>
       <script>
-        const menu=document.querySelector(".menu-btn");
-        const links=document.querySelector(".nav-links");
-        menu.addEventListener("click",()=>{
-            links.classList.toggle("active-links");
-        })
+        const menu = document.querySelector(".menu-btn");
+        const links = document.querySelector(".nav-links");
+
+        function isMobileScreen() {
+            return window.innerWidth <= 768;
+        }
+
+        menu.addEventListener("click", () => {
+            if (isMobileScreen()) {
+                links.classList.toggle("active-links");
+            }
+        });
+
+        document.querySelectorAll(".nav-links a").forEach(link => {
+            link.addEventListener("click", () => {
+                if (isMobileScreen()) {
+                    links.classList.remove("active-links");
+                    links.style.display = 'none';
+                    setTimeout(() => {
+                        links.style.display = '';
+                    }, 1000); // Adjust timeout duration if needed
+                }
+            });
+        });
+
+        window.addEventListener('resize', function() {
+            if (!isMobileScreen()) {
+                links.style.display = '';
+            }
+        });
      function display(event) {
       event.preventDefault();
       let email = document.getElementById("email").value;

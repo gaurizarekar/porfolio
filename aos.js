@@ -4,7 +4,7 @@ $(document).ready(function(){
     },{offset:"80%"});
     $(".line").waypoint(function(){
         $(".line").addClass("animate__animated animate__fadeInUp")
-    },{offset:"80%"});
+    },{offset:"120%"});
     $(".about").waypoint(function(){
         $(".about").addClass("animate__animated animate__fadeInUp")
     },{offset:"80%"});
