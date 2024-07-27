@@ -5,6 +5,7 @@
 }
 body,html{
     font-family: sans-serif;
+    scroll-behavior: smooth;
 }
 a{
     text-decoration: none;
@@ -368,4 +369,31 @@ footer h1{
     opacity: 1;
     transform: translateY(0);
   }
-  
+  #progress{
+    /* background-color: purple; */
+    position: fixed;
+    bottom: 20px;
+    right:10px;
+    height: 50px;
+    width: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+     border-radius: 50%;
+     cursor: pointer;
+    color: white;
+    z-index: 998;
+    box-shadow: 0 0 10px rgba(0,0,0,0.2);
+  }
+  #progress-value{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 38px; /* Adjusted to ensure inner circle fits well */
+    width: 38px;  /* Adjusted to ensure inner circle fits well */
+    color:purple;
+    font-weight: 500;
+    background-color:white;
+    border-radius: 50%;
+    font-size: 20px; /* Adjust font size to fit within the circle */
+  }
